@@ -72,7 +72,7 @@ Converged after **319 iterations**: μ = [64.177, 69.519], σ² = [5.302, 6.041]
 
 Using the IMDb review dataset, we compute **P(Positive | keyword)** via Bayes' Theorem for positive-leaning and negative-leaning keywords, in pure Python (no ML libraries). We compute only this one direction, as the brief requires.
 
-**Keywords:** _add 2–4 positive and 2–4 negative keywords, with a one-line reason for each_
+**Keywords:** amazing, excellent, wonderful, enjoyable (positive-leaning) · terrible, boring, awful, disappointing (negative-leaning)
 
 **Run it:**
 
@@ -85,12 +85,16 @@ python app.py
 
 | Keyword | Prior P(Positive) | Likelihood P(kw\|Pos) | Marginal P(kw) | Posterior P(Pos\|kw) |
 |---------|-------------------|-----------------------|----------------|----------------------|
-| _keyword_ | | | | |
-| _keyword_ | | | | |
-| _keyword_ | | | | |
-| _keyword_ | | | | |
+| amazing | 0.50 | 0.0740 | 0.0496 | 0.7463 |
+| excellent | 0.50 | 0.1174 | 0.0725 | 0.8099 |
+| wonderful | 0.50 | 0.1066 | 0.0650 | 0.8203 |
+| enjoyable | 0.50 | 0.0424 | 0.0309 | 0.6846 |
+| terrible | 0.50 | 0.0154 | 0.0541 | 0.1419 |
+| boring | 0.50 | 0.0247 | 0.0623 | 0.1983 |
+| awful | 0.50 | 0.0136 | 0.0624 | 0.1093 |
+| disappointing | 0.50 | 0.0074 | 0.0165 | 0.2236 |
 
-Posterior = Likelihood × Prior / Marginal. Positive-leaning keywords should push the posterior above the prior and negative-leaning ones below it.
+Posterior = Likelihood × Prior / Marginal. Positive-leaning keywords push the posterior well above the 0.50 prior (0.68–0.82), and negative-leaning keywords push it well below (0.11–0.22), which is the direction Bayes' Theorem predicts.
 
 ---
 
@@ -143,8 +147,8 @@ This produces two separate plots:
 
 - **Part 1 (EM):** Faith Mutoni
 - **Part 2 (Bayes):** Kenny Ishimwe Gatete
-- **Part 3 (Manual GD):** Regina leads; one iteration per member (Iteration 0: _Regina_, Iteration 1: _Faith_, Iteration 2: _Kenny_)
-- **Part 4 (Code):** Kenny Ishimwe Gatete
+- **Part 3 (Manual GD):** Regina leads; one iteration per member (Iteration 1: _name_, Iteration 2: _name_, Iteration 3: _name_)
+- **Part 4 (Code):** _name_
 
 ## Submission Checklist
 
