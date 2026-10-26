@@ -148,7 +148,7 @@ This produces two separate plots:
 - **Part 1 (EM):** Faith Mutoni
 - **Part 2 (Bayes):** Kenny Ishimwe Gatete
 - **Part 3 (Manual GD):** Regina leads; one iteration per member (Iteration 1: _name_, Iteration 2: _name_, Iteration 3: _name_)
-- **Part 4 (Code):** _name_
+- **Part 4 (Code):** _Regina_
 
 ## Submission Checklist
 
